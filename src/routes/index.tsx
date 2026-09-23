@@ -274,6 +274,9 @@ function Index() {
                 <span>({project.index})</span>
                 <span className="text-primary">{project.tag}</span>
               </div>
+              <p className="mb-4 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
+                {project.period}
+              </p>
               <img
                 src={project.image}
                 alt={project.title}
@@ -377,26 +380,37 @@ function Index() {
             <h3 className="mb-6 font-mono text-xs tracking-widest text-muted-foreground uppercase">
               Education
             </h3>
-            <div className="border-l border-border pl-5">
-              <div className="flex items-baseline justify-between">
-                <span className="font-display text-2xl tracking-tight">
-                  B.Tech CSE
-                </span>
-                <span className="font-mono text-xs text-muted-foreground">
-                  2022 — 2026
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-pretty text-muted-foreground">
-                College of Engineering Cherthala · CGPA 7.0
-              </p>
+            <div className="space-y-6">
+              {EDUCATION.map((edu) => (
+                <div
+                  key={edu.level}
+                  className="border-l border-border pl-5"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <span className="font-display text-2xl tracking-tight">
+                      {edu.level}
+                    </span>
+                    <span className="font-display text-xl text-primary">
+                      {edu.score}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm text-pretty text-muted-foreground">
+                    {edu.school} · {edu.period}
+                  </p>
+                </div>
+              ))}
             </div>
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground">
-                English
-              </span>
-              <span className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground">
-                Malayalam
-              </span>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {["English", "Malayalam", ...SOFT_SKILLS, ...ACTIVITIES].map(
+                (chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground"
+                  >
+                    {chip}
+                  </span>
+                ),
+              )}
             </div>
           </div>
         </div>
