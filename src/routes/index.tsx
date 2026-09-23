@@ -37,29 +37,32 @@ const PROJECTS = [
   {
     index: "01",
     tag: "AI · Backend",
+    period: "Jul 2025 — Present",
     image: workGrocery,
     title: "Smart Grocery Assistant",
     description:
-      "OCR-powered cart scanner that prices items in real time, sends expiry and refill alerts, and plans in-store routes through a Django backend.",
+      "OCR-powered grocery assistant on Django — AI-driven recommendations, expiry and refill alerts, and in-store navigation with route optimization.",
     stack: ["OCR", "AI", "Django"],
   },
   {
     index: "02",
     tag: "Mobile",
+    period: "Dec 2024 — May 2025",
     image: workTracking,
     title: "Family Members Tracking",
     description:
-      "Location-aware Android app with Firebase realtime sync, safety alerts and secure user management for shared household safety.",
-    stack: ["Android", "Firebase"],
+      "Real-time family tracking system with location sharing, safety alerts and secure user management, built with Android Studio and Firebase.",
+    stack: ["Android Studio", "Firebase"],
   },
   {
     index: "03",
     tag: "Systems",
+    period: "Jul 2024 — Nov 2024",
     image: workGaming,
     title: "Gaming Cafe Management",
     description:
-      "Registration, booking, billing and an admin dashboard for a busy gaming floor — calm operations on Postgres and Django.",
-    stack: ["Django", "Postgres"],
+      "User registration, game booking, billing and an admin dashboard for efficient gaming-cafe operations, built with Django.",
+    stack: ["Django", "Admin Dashboard"],
   },
 ];
 
@@ -68,25 +71,62 @@ const SKILLS = [
   "Django",
   "React",
   "Next.js",
+  "Java",
+  "JWT & Auth",
   "Postgres",
+  "SQLite",
+  "HTML & CSS",
   "Redis",
   "Celery",
-  "Docker",
   "CI/CD",
+  "Docker",
+  "DevOps",
+  "Firebase",
 ];
+
+const SOFT_SKILLS = [
+  "Team Management",
+  "Communication",
+  "Event Coordination",
+  "Leadership",
+  "Problem-Solving",
+];
+
+const ACTIVITIES = ["NRPF Unit Coordinator", "NSS Volunteer"];
 
 const INTERNSHIPS = [
   {
     title: "Mobile App Dev",
-    meta: "CEC · DevFactory",
+    meta: "CEC · DevFactory · Jun 2023",
     description:
-      "Built and iterated on Android applications with Android Studio, SQLite and MySQL across a 10-day internship.",
+      "10-day internship designing and building mobile applications with Android Studio, SQLite and MySQL.",
   },
   {
     title: "IBOT Robotics",
-    meta: "Workshop",
+    meta: "SCET · TEKWIZA · Dec 2022",
     description:
-      "Embedded control on Arduino with C++, wiring IR and motor sensors for autonomous robot behaviour.",
+      "Built a programmable robot with Arduino IDE and C++ — IR and motor sensors for responsive autonomous movement.",
+  },
+];
+
+const EDUCATION = [
+  {
+    level: "B.Tech — Computer Science & Engineering",
+    school: "College of Engineering Cherthala, IHRD",
+    period: "2022 — 2026",
+    score: "CGPA 7.2",
+  },
+  {
+    level: "Higher Secondary (12th)",
+    school: "St Antony's HSS, Mala",
+    period: "2019 — 2021",
+    score: "99%",
+  },
+  {
+    level: "Secondary — SSLC (10th)",
+    school: "St Joseph EMHSS, Aloor",
+    period: "March 2018",
+    score: "98%",
   },
 ];
 
@@ -177,7 +217,7 @@ function Index() {
                     CGPA
                   </span>
                   <span className="font-display text-3xl text-primary">
-                    7.0
+                    7.2
                   </span>
                 </div>
                 <div className="flex items-baseline justify-between border-b border-border pb-3">
