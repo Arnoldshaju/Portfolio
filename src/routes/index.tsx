@@ -429,18 +429,26 @@ function Index() {
           <br />
           <span className="text-primary">SOMETHING.</span>
         </h2>
-        <a
-          href="mailto:arnoldshaju75@gmail.com"
-          className="group mt-10 inline-flex items-center gap-4 rounded-full border border-primary/40 px-8 py-4 font-mono text-sm text-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
-        >
-          arnoldshaju75@gmail.com{" "}
-          <span className="transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </a>
-        <div className="mt-16 flex items-center justify-between border-t border-border pt-6 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href="mailto:arnoldshaju75@gmail.com"
+            className="group inline-flex items-center gap-4 rounded-full border border-primary/40 px-8 py-4 font-mono text-sm text-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+          >
+            arnoldshaju75@gmail.com{" "}
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+          <a
+            href="tel:+916238046258"
+            className="inline-flex items-center gap-4 rounded-full border border-border px-8 py-4 font-mono text-sm text-foreground transition-colors duration-300 hover:bg-foreground/5"
+          >
+            +91 62380 46258
+          </a>
+        </div>
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
           <span>Arnold Shaju — CSE Fresher</span>
-          <span>Kerala, India · 2026</span>
+          <span>Chalakudy, Thrissur, Kerala · 2026</span>
         </div>
       </footer>
     </div>
