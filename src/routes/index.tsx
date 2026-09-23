@@ -37,29 +37,32 @@ const PROJECTS = [
   {
     index: "01",
     tag: "AI · Backend",
+    period: "Jul 2025 — Present",
     image: workGrocery,
     title: "Smart Grocery Assistant",
     description:
-      "OCR-powered cart scanner that prices items in real time, sends expiry and refill alerts, and plans in-store routes through a Django backend.",
+      "OCR-powered grocery assistant on Django — AI-driven recommendations, expiry and refill alerts, and in-store navigation with route optimization.",
     stack: ["OCR", "AI", "Django"],
   },
   {
     index: "02",
     tag: "Mobile",
+    period: "Dec 2024 — May 2025",
     image: workTracking,
     title: "Family Members Tracking",
     description:
-      "Location-aware Android app with Firebase realtime sync, safety alerts and secure user management for shared household safety.",
-    stack: ["Android", "Firebase"],
+      "Real-time family tracking system with location sharing, safety alerts and secure user management, built with Android Studio and Firebase.",
+    stack: ["Android Studio", "Firebase"],
   },
   {
     index: "03",
     tag: "Systems",
+    period: "Jul 2024 — Nov 2024",
     image: workGaming,
     title: "Gaming Cafe Management",
     description:
-      "Registration, booking, billing and an admin dashboard for a busy gaming floor — calm operations on Postgres and Django.",
-    stack: ["Django", "Postgres"],
+      "User registration, game booking, billing and an admin dashboard for efficient gaming-cafe operations, built with Django.",
+    stack: ["Django", "Admin Dashboard"],
   },
 ];
 
@@ -68,25 +71,62 @@ const SKILLS = [
   "Django",
   "React",
   "Next.js",
+  "Java",
+  "JWT & Auth",
   "Postgres",
+  "SQLite",
+  "HTML & CSS",
   "Redis",
   "Celery",
-  "Docker",
   "CI/CD",
+  "Docker",
+  "DevOps",
+  "Firebase",
 ];
+
+const SOFT_SKILLS = [
+  "Team Management",
+  "Communication",
+  "Event Coordination",
+  "Leadership",
+  "Problem-Solving",
+];
+
+const ACTIVITIES = ["NRPF Unit Coordinator", "NSS Volunteer"];
 
 const INTERNSHIPS = [
   {
     title: "Mobile App Dev",
-    meta: "CEC · DevFactory",
+    meta: "CEC · DevFactory · Jun 2023",
     description:
-      "Built and iterated on Android applications with Android Studio, SQLite and MySQL across a 10-day internship.",
+      "10-day internship designing and building mobile applications with Android Studio, SQLite and MySQL.",
   },
   {
     title: "IBOT Robotics",
-    meta: "Workshop",
+    meta: "SCET · TEKWIZA · Dec 2022",
     description:
-      "Embedded control on Arduino with C++, wiring IR and motor sensors for autonomous robot behaviour.",
+      "Built a programmable robot with Arduino IDE and C++ — IR and motor sensors for responsive autonomous movement.",
+  },
+];
+
+const EDUCATION = [
+  {
+    level: "B.Tech — Computer Science & Engineering",
+    school: "College of Engineering Cherthala, IHRD",
+    period: "2022 — 2026",
+    score: "CGPA 7.2",
+  },
+  {
+    level: "Higher Secondary (12th)",
+    school: "St Antony's HSS, Mala",
+    period: "2019 — 2021",
+    score: "99%",
+  },
+  {
+    level: "Secondary — SSLC (10th)",
+    school: "St Joseph EMHSS, Aloor",
+    period: "March 2018",
+    score: "98%",
   },
 ];
 
@@ -177,7 +217,7 @@ function Index() {
                     CGPA
                   </span>
                   <span className="font-display text-3xl text-primary">
-                    7.0
+                    7.2
                   </span>
                 </div>
                 <div className="flex items-baseline justify-between border-b border-border pb-3">
@@ -234,6 +274,9 @@ function Index() {
                 <span>({project.index})</span>
                 <span className="text-primary">{project.tag}</span>
               </div>
+              <p className="mb-4 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
+                {project.period}
+              </p>
               <img
                 src={project.image}
                 alt={project.title}
@@ -337,26 +380,37 @@ function Index() {
             <h3 className="mb-6 font-mono text-xs tracking-widest text-muted-foreground uppercase">
               Education
             </h3>
-            <div className="border-l border-border pl-5">
-              <div className="flex items-baseline justify-between">
-                <span className="font-display text-2xl tracking-tight">
-                  B.Tech CSE
-                </span>
-                <span className="font-mono text-xs text-muted-foreground">
-                  2022 — 2026
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-pretty text-muted-foreground">
-                College of Engineering Cherthala · CGPA 7.0
-              </p>
+            <div className="space-y-6">
+              {EDUCATION.map((edu) => (
+                <div
+                  key={edu.level}
+                  className="border-l border-border pl-5"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <span className="font-display text-2xl tracking-tight">
+                      {edu.level}
+                    </span>
+                    <span className="font-display text-xl text-primary">
+                      {edu.score}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm text-pretty text-muted-foreground">
+                    {edu.school} · {edu.period}
+                  </p>
+                </div>
+              ))}
             </div>
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground">
-                English
-              </span>
-              <span className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground">
-                Malayalam
-              </span>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {["English", "Malayalam", ...SOFT_SKILLS, ...ACTIVITIES].map(
+                (chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground"
+                  >
+                    {chip}
+                  </span>
+                ),
+              )}
             </div>
           </div>
         </div>
@@ -375,18 +429,26 @@ function Index() {
           <br />
           <span className="text-primary">SOMETHING.</span>
         </h2>
-        <a
-          href="mailto:arnoldshaju75@gmail.com"
-          className="group mt-10 inline-flex items-center gap-4 rounded-full border border-primary/40 px-8 py-4 font-mono text-sm text-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
-        >
-          arnoldshaju75@gmail.com{" "}
-          <span className="transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </a>
-        <div className="mt-16 flex items-center justify-between border-t border-border pt-6 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href="mailto:arnoldshaju75@gmail.com"
+            className="group inline-flex items-center gap-4 rounded-full border border-primary/40 px-8 py-4 font-mono text-sm text-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+          >
+            arnoldshaju75@gmail.com{" "}
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+          <a
+            href="tel:+916238046258"
+            className="inline-flex items-center gap-4 rounded-full border border-border px-8 py-4 font-mono text-sm text-foreground transition-colors duration-300 hover:bg-foreground/5"
+          >
+            +91 62380 46258
+          </a>
+        </div>
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
           <span>Arnold Shaju — CSE Fresher</span>
-          <span>Kerala, India · 2026</span>
+          <span>Chalakudy, Thrissur, Kerala · 2026</span>
         </div>
       </footer>
     </div>
