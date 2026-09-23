@@ -1,5 +1,5 @@
 # Roadmap
 
-- [x] Generate bolder, more attractive portfolio design directions
-- [x] User picked Frosted Kinetic Editorial
-- [x] Built portfolio site from Arnold Shaju's resume in chosen direction
+- [x] Portfolio site (Frosted Kinetic Editorial)
+- [x] Full resume details, CGPA 7.2, separate 10th/12th education space
+- [ ] AI Q&A feature: visitors ask about Arnold's experience/projects (AI Gateway)
