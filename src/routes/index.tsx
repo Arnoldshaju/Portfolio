@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import workGrocery from "@/assets/work-grocery.jpg";
 import workTracking from "@/assets/work-tracking.jpg";
-import workGaming from "@/assets/work-gaming.jpg";
+import workTerra from "@/assets/work-terra.jpg";
 
 const TITLE = "Arnold Shaju — Full-Stack Developer Portfolio";
 const DESCRIPTION =
@@ -56,13 +56,13 @@ const PROJECTS = [
   },
   {
     index: "03",
-    tag: "Systems",
-    period: "Jul 2024 — Nov 2024",
-    image: workGaming,
-    title: "Gaming Cafe Management",
+    tag: "Web · Frontend",
+    period: "2025",
+    image: workTerra,
+    title: "Terra Mindspace",
     description:
-      "User registration, game booking, billing and an admin dashboard for efficient gaming-cafe operations, built with Django.",
-    stack: ["Django", "Admin Dashboard"],
+      "A modern restaurant website with an elegant, immersive dining experience — built with TanStack Start, React, TypeScript and Tailwind CSS.",
+    stack: ["TanStack Start", "React", "TypeScript", "Tailwind CSS"],
   },
 ];
 
