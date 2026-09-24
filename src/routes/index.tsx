@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import workGrocery from "@/assets/work-grocery.jpg";
-import workTracking from "@/assets/work-tracking.jpg";
+import workZeal from "@/assets/work-zeal.jpg";
 import workTerra from "@/assets/work-terra.jpg";
 
 const TITLE = "Arnold Shaju — Full-Stack Developer Portfolio";
@@ -46,13 +46,13 @@ const PROJECTS = [
   },
   {
     index: "02",
-    tag: "Mobile",
-    period: "Dec 2024 — May 2025",
-    image: workTracking,
-    title: "Family Members Tracking",
+    tag: "Full-Stack",
+    period: "2025 — Present",
+    image: workZeal,
+    title: "Zeal",
     description:
-      "Real-time family tracking system with location sharing, safety alerts and secure user management, built with Android Studio and Firebase.",
-    stack: ["Android Studio", "Firebase"],
+      "Full-stack collaborative document editor with authentication, role-based sharing, real-time WebSocket updates and live presence — built with Next.js and Django REST Framework.",
+    stack: ["Next.js", "Django REST", "WebSockets"],
   },
   {
     index: "03",
