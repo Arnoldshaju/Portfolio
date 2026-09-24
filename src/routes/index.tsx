@@ -461,6 +461,17 @@ function Index() {
           >
             +91 62380 46258
           </a>
+          <a
+            href="https://github.com/Arnoldshaju"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-4 rounded-full border border-border px-8 py-4 font-mono text-sm text-foreground transition-colors duration-300 hover:bg-foreground/5"
+          >
+            GitHub{" "}
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              ↗
+            </span>
+          </a>
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
           <span>Arnold Shaju — CSE Fresher</span>
