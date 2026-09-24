@@ -154,12 +154,21 @@ function Index() {
             Path
           </a>
         </div>
-        <a
-          href="#contact"
-          className="rounded-full border border-primary/40 px-4 py-1.5 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
-        >
-          Hire me
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="/arnold-shaju-resume.pdf"
+            download="Arnold-Shaju-Resume.pdf"
+            className="rounded-full border border-border px-4 py-1.5 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:bg-foreground/5"
+          >
+            Résumé ↓
+          </a>
+          <a
+            href="#contact"
+            className="rounded-full border border-primary/40 px-4 py-1.5 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            Hire me
+          </a>
+        </div>
       </nav>
 
       {/* Hero */}
@@ -196,6 +205,13 @@ function Index() {
                 className="rounded-full border border-border px-7 py-3 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:bg-foreground/5"
               >
                 See the work
+              </a>
+              <a
+                href="/arnold-shaju-resume.pdf"
+                download="Arnold-Shaju-Resume.pdf"
+                className="rounded-full border border-border px-7 py-3 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                Download résumé ↓
               </a>
             </div>
           </div>
