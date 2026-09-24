@@ -99,7 +99,7 @@ const INTERNSHIPS = [
     title: "Mobile App Dev",
     meta: "CEC · DevFactory · Jun 2023",
     description:
-      "10-day internship designing and building mobile applications with Android Studio, SQLite and MySQL.",
+      "Internship in designing and building mobile applications with Android Studio, SQLite and MySQL.",
   },
   {
     title: "IBOT Robotics",
