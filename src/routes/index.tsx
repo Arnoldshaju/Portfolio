@@ -99,7 +99,7 @@ const INTERNSHIPS = [
     title: "Mobile App Dev",
     meta: "CEC · DevFactory · Jun 2023",
     description:
-      "10-day internship designing and building mobile applications with Android Studio, SQLite and MySQL.",
+      "Internship in designing and building mobile applications with Android Studio, SQLite and MySQL.",
   },
   {
     title: "IBOT Robotics",
@@ -218,8 +218,8 @@ function Index() {
           <div className="md:col-span-4">
             <div className="animate-rise rounded-2xl border border-border bg-foreground/5 p-6 backdrop-blur-2xl [animation-delay:420ms]">
               <div className="mb-5 flex items-center gap-2 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
-                <span className="size-2 rounded-full bg-primary" /> Now
-                available for internships
+                <span className="size-2 rounded-full bg-primary" /> NOW
+                AVAILABLE FOR JOBS
               </div>
               <div className="space-y-4">
                 <div className="flex items-baseline justify-between border-b border-border pb-3">
