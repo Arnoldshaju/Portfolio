@@ -160,6 +160,9 @@ function Index() {
       <nav className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-panel/40 px-6 py-4 backdrop-blur-2xl md:px-12">
         <span className="font-mono text-sm text-primary">ARNOLD_SHAJU</span>
         <div className="hidden gap-8 font-mono text-xs tracking-widest text-muted-foreground uppercase md:flex">
+          <a href="#about" className="transition-colors hover:text-foreground">
+            About
+          </a>
           <a href="#work" className="transition-colors hover:text-foreground">
             Work
           </a>
@@ -171,6 +174,12 @@ function Index() {
           </a>
         </div>
         <div className="flex items-center gap-3">
+          <a
+            href="#about"
+            className="rounded-full border border-primary/40 px-4 py-1.5 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:border-primary hover:bg-primary/10"
+          >
+            About me
+          </a>
           <a
             href="/arnold-shaju-resume.pdf"
             download="Arnold-Shaju-Resume.pdf"
@@ -187,8 +196,8 @@ function Index() {
         </div>
       </nav>
 
-      {/* Hero */}
-      <header className="relative z-10 px-6 pt-16 pb-10 md:px-12 md:pt-24">
+      {/* Hero / About */}
+      <header id="about" className="relative z-10 px-6 pt-16 pb-10 md:px-12 md:pt-24">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-8">
             <p className="mb-6 animate-rise font-mono text-xs tracking-[0.3em] text-primary uppercase [animation-delay:80ms]">
