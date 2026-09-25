@@ -92,7 +92,23 @@ const SOFT_SKILLS = [
   "Problem-Solving",
 ];
 
-const ACTIVITIES = ["NRPF Unit Coordinator", "NSS Volunteer"];
+const LANGUAGES = [
+  { name: "English", level: "Full Professional" },
+  { name: "Malayalam", level: "Native / Bilingual" },
+];
+
+const ACTIVITIES = [
+  {
+    title: "NRPF Unit Coordinator",
+    role: "Leadership",
+    description: "Coordinating National Resource Protection Force activities and campus initiatives.",
+  },
+  {
+    title: "NSS Volunteer",
+    role: "Community Service",
+    description: "Active member in National Service Scheme social welfare and community outreach drives.",
+  },
+];
 
 const INTERNSHIPS = [
   {
@@ -322,36 +338,63 @@ function Index() {
         </div>
       </section>
 
-      {/* Skills */}
+      {/* Skills & Capabilities */}
       <section
         id="skills"
         className="relative z-10 px-6 py-20 md:px-12 md:py-24"
       >
-        <div className="grid gap-8 md:grid-cols-12">
-          <div className="md:col-span-5">
+        <div className="grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
             <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-              (stack)
+              (skills & capabilities)
             </span>
             <h2 className="mt-4 font-display text-5xl tracking-tight text-balance md:text-6xl">
               What I<br />
-              build with
+              bring to<br />
+              the table
             </h2>
-            <p className="mt-6 max-w-52 text-sm text-pretty text-muted-foreground">
-              A backend-first toolkit, with the DevOps layer to ship it.
-              Comfortable from database to deploy.
+            <p className="mt-6 max-w-60 text-sm text-pretty text-muted-foreground">
+              A backend-first engineering toolkit complemented by strong communication, team management, and problem-solving abilities.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:col-span-7">
-            {SKILLS.map((skill) => (
-              <div
-                key={skill}
-                className="rounded-xl border border-border bg-foreground/5 p-4 backdrop-blur-xl transition-colors duration-300 hover:border-primary/40"
-              >
-                <span className="font-mono text-lg text-foreground">
-                  {skill}
-                </span>
+          <div className="space-y-10 md:col-span-8">
+            {/* Technical Stack */}
+            <div>
+              <h3 className="mb-4 font-mono text-xs tracking-widest text-primary uppercase">
+                Technical Stack
+              </h3>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {SKILLS.map((skill) => (
+                  <div
+                    key={skill}
+                    className="rounded-xl border border-border bg-foreground/5 p-4 backdrop-blur-xl transition-colors duration-300 hover:border-primary/40"
+                  >
+                    <span className="font-mono text-base text-foreground">
+                      {skill}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Soft Skills */}
+            <div>
+              <h3 className="mb-4 font-mono text-xs tracking-widest text-primary uppercase">
+                Soft Skills
+              </h3>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {SOFT_SKILLS.map((skill) => (
+                  <div
+                    key={skill}
+                    className="rounded-xl border border-border bg-foreground/5 p-4 backdrop-blur-xl transition-colors duration-300 hover:border-primary/40"
+                  >
+                    <span className="font-mono text-base text-foreground">
+                      {skill}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -360,73 +403,115 @@ function Index() {
       <section id="path" className="relative z-10 px-6 py-20 md:px-12 md:py-24">
         <div className="mb-12 border-b border-border pb-6">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-            (path)
+            (path & involvement)
           </span>
           <h2 className="mt-4 font-display text-5xl tracking-tight text-balance md:text-6xl">
-            Experience &amp; Education
+            Experience, Education &amp; Activities
           </h2>
         </div>
-        <div className="grid gap-10 md:grid-cols-2">
-          <div>
-            <h3 className="mb-6 font-mono text-xs tracking-widest text-muted-foreground uppercase">
-              Internships
-            </h3>
-            <div className="space-y-6">
-              {INTERNSHIPS.map((item) => (
-                <div
-                  key={item.title}
-                  className="border-l border-border pl-5"
-                >
-                  <div className="flex items-baseline justify-between">
-                    <span className="font-display text-2xl tracking-tight">
-                      {item.title}
-                    </span>
-                    <span className="font-mono text-xs text-muted-foreground">
-                      {item.meta}
-                    </span>
+        <div className="grid gap-12 md:grid-cols-2">
+          {/* Column 1: Internships & Activities */}
+          <div className="space-y-10">
+            <div>
+              <h3 className="mb-6 font-mono text-xs tracking-widest text-primary uppercase">
+                Internships
+              </h3>
+              <div className="space-y-6">
+                {INTERNSHIPS.map((item) => (
+                  <div
+                    key={item.title}
+                    className="border-l border-border pl-5"
+                  >
+                    <div className="flex items-baseline justify-between">
+                      <span className="font-display text-2xl tracking-tight">
+                        {item.title}
+                      </span>
+                      <span className="font-mono text-xs text-muted-foreground">
+                        {item.meta}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm text-pretty text-muted-foreground">
+                      {item.description}
+                    </p>
                   </div>
-                  <p className="mt-2 text-sm text-pretty text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="mb-6 font-mono text-xs tracking-widest text-primary uppercase">
+                Activities &amp; Leadership
+              </h3>
+              <div className="space-y-4">
+                {ACTIVITIES.map((act) => (
+                  <div
+                    key={act.title}
+                    className="rounded-xl border border-border bg-foreground/5 p-4 backdrop-blur-xl transition-colors duration-300 hover:border-primary/40"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-display text-xl tracking-tight text-foreground">
+                        {act.title}
+                      </span>
+                      <span className="font-mono text-[11px] tracking-widest text-primary uppercase">
+                        {act.role}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm text-pretty text-muted-foreground">
+                      {act.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <div>
-            <h3 className="mb-6 font-mono text-xs tracking-widest text-muted-foreground uppercase">
-              Education
-            </h3>
-            <div className="space-y-6">
-              {EDUCATION.map((edu) => (
-                <div
-                  key={edu.level}
-                  className="border-l border-border pl-5"
-                >
-                  <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <span className="font-display text-2xl tracking-tight">
-                      {edu.level}
+
+          {/* Column 2: Education & Languages */}
+          <div className="space-y-10">
+            <div>
+              <h3 className="mb-6 font-mono text-xs tracking-widest text-primary uppercase">
+                Education
+              </h3>
+              <div className="space-y-6">
+                {EDUCATION.map((edu) => (
+                  <div
+                    key={edu.level}
+                    className="border-l border-border pl-5"
+                  >
+                    <div className="flex flex-wrap items-baseline justify-between gap-2">
+                      <span className="font-display text-2xl tracking-tight">
+                        {edu.level}
+                      </span>
+                      <span className="font-display text-xl text-primary">
+                        {edu.score}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm text-pretty text-muted-foreground">
+                      {edu.school} · {edu.period}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="mb-6 font-mono text-xs tracking-widest text-primary uppercase">
+                Languages
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {LANGUAGES.map((lang) => (
+                  <div
+                    key={lang.name}
+                    className="rounded-xl border border-border bg-foreground/5 p-4 backdrop-blur-xl transition-colors duration-300 hover:border-primary/40"
+                  >
+                    <span className="block font-display text-2xl tracking-tight text-foreground">
+                      {lang.name}
                     </span>
-                    <span className="font-display text-xl text-primary">
-                      {edu.score}
+                    <span className="font-mono text-xs text-muted-foreground">
+                      {lang.level}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm text-pretty text-muted-foreground">
-                    {edu.school} · {edu.period}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {["English", "Malayalam", ...SOFT_SKILLS, ...ACTIVITIES].map(
-                (chip) => (
-                  <span
-                    key={chip}
-                    className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground"
-                  >
-                    {chip}
-                  </span>
-                ),
-              )}
+                ))}
+              </div>
             </div>
           </div>
         </div>
