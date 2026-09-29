@@ -209,9 +209,9 @@ function Index() {
               <span className="text-primary">SHAJU</span>
             </h1>
             <p className="mt-8 max-w-60 animate-rise font-mono text-sm text-pretty text-muted-foreground [animation-delay:260ms]">
-              I build backend systems, mobile tools, and the unglamorous
-              machinery that keeps them running. Currently shipping in Python,
-              Django &amp; React.
+              I build web frontends, backend systems, and DevOps pipelines
+              that keep applications running smoothly. Currently shipping in
+              React, Django &amp; Docker.
             </p>
             <div className="mt-10 flex animate-rise flex-wrap items-center gap-4 [animation-delay:360ms]">
               <a
@@ -265,7 +265,9 @@ function Index() {
                   <span className="font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
                     Focus
                   </span>
-                  <span className="text-right text-sm">Backend · Mobile</span>
+                  <span className="text-right text-sm">
+                    Frontend · Backend · DevOps
+                  </span>
                 </div>
                 <div className="flex items-baseline justify-between">
                   <span className="font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
