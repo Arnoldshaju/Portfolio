@@ -169,7 +169,7 @@ function Index() {
           <div
             className="fixed inset-0 transition-opacity duration-300"
             style={{
-              background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(100, 220, 255, 0.14), transparent 75%)`,
+              background: `radial-gradient(300px circle at ${mousePos.x}px ${mousePos.y}px, rgba(100, 220, 255, 0.16), transparent 75%)`,
             }}
           />
         )}
