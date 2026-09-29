@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import workGrocery from "@/assets/work-grocery.jpg";
 import workZeal from "@/assets/work-zeal.jpg";
@@ -147,13 +148,31 @@ const EDUCATION = [
 ];
 
 function Index() {
+  const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-background font-sans text-foreground">
-      {/* Ambient glows */}
-      <div className="pointer-events-none fixed inset-0" aria-hidden="true">
+      {/* Ambient glows & Interactive Spotlight */}
+      <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
         <div className="absolute -top-40 -left-32 h-[42vw] w-[42vw] animate-drift rounded-full bg-primary/25 blur-[140px]" />
         <div className="absolute right-0 bottom-0 h-[36vw] w-[36vw] animate-drift-reverse rounded-full bg-ice/20 blur-[150px]" />
         <div className="absolute top-1/3 left-1/2 h-[26vw] w-[26vw] animate-drift-slow rounded-full bg-primary/10 blur-[130px]" />
+        {mousePos && (
+          <div
+            className="fixed inset-0 transition-opacity duration-300"
+            style={{
+              background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(100, 220, 255, 0.14), transparent 75%)`,
+            }}
+          />
+        )}
       </div>
 
       {/* Nav */}
@@ -241,10 +260,13 @@ function Index() {
             </div>
           </div>
           <div className="md:col-span-4">
-            <div className="animate-rise rounded-2xl border border-border bg-foreground/5 p-6 backdrop-blur-2xl [animation-delay:420ms]">
-              <div className="mb-5 flex items-center gap-2 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
-                <span className="size-2 rounded-full bg-primary" /> NOW
-                AVAILABLE FOR JOBS
+            <div className="animate-rise rounded-2xl border border-border bg-foreground/5 p-6 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 [animation-delay:420ms]">
+              <div className="mb-5 flex items-center gap-2.5 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
+                <span className="relative flex size-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                  <span className="relative inline-flex size-2.5 rounded-full bg-primary" />
+                </span>
+                NOW AVAILABLE FOR JOBS
               </div>
               <div className="space-y-4">
                 <div className="flex items-baseline justify-between border-b border-border pb-3">
