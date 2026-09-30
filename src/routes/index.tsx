@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import workGrocery from "@/assets/work-grocery.jpg";
 import workZeal from "@/assets/work-zeal.jpg";
 import workTerra from "@/assets/work-terra.jpg";
@@ -236,6 +236,12 @@ function Index() {
           </a>
         </div>
         <div className="flex items-center gap-3">
+          <Link
+            to="/terminal"
+            className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-mono text-xs tracking-widest text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            💻 Terminal OS
+          </Link>
           <a
             href="#about"
             className="rounded-full border border-primary/40 px-4 py-1.5 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:border-primary hover:bg-primary/10"
